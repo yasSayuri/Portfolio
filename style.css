@@ -276,12 +276,20 @@ img {
   font-size: 0.83rem;
   color: var(--text-soft);
   cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.tab.active {
+.tab:hover,
+.tab:focus-visible {
   background: linear-gradient(135deg, #ff7af3, #7a3cff);
   color: #05010f;
   border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(122, 60, 255, 0.35);
+}
+
+.tab:focus-visible {
+  outline: none;
 }
 
 /* Services */
